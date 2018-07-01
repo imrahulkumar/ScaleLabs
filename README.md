@@ -4,7 +4,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## About the project
 
-The project is hosted at (https://scale-labs.herokuapp.com/).
+The project is hosted at (https://scale-labs.herokuapp.com/). <br>
+Developed in Angular 6
 
 ## Development server
 
