@@ -1,0 +1,52 @@
+<div class="bg-white ng-scope">
+  <div *ngIf="header" class="app-header navbar ng-scope" style="">
+    <div class="navbar-header bg-white box-shadow">
+      <button class="pull-right visible-xs dk" ui-toggle-class="show" data-target=".navbar-collapse">
+<i class="glyphicon glyphicon-align-justify"></i>
+</button>
+      <a href="" class="navbar-brand text-lt" ui-sref="home.main">
+<i><img
+ src="assets/img/logo.png" style="max-height: 30px;"></i>
+</a>
+    </div>
+    <div class="collapse pos-rlt navbar-collapse box-shadow bg-white">
+      <ul class="nav navbar-nav navbar-left">
+        <li>
+          <a [routerLink]="['home']" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{ exact: true }">Home</a>
+        </li>
+        <li>
+          <a [routerLink]="['data']" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{ exact: true }">Data</a>
+        </li>
+
+        <li>
+          <a [routerLink]="['about-us']" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{ exact: true }">About us</a>
+        </li>
+        <li>
+          <a  [href]="url" target="_blank" >Blog</a>
+        </li>
+        <li>
+          <a [routerLink]="['/']" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{ exact: true }">Shop</a>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown" dropdown="">
+          <a ui-sref="access.signin" href="">Signin</a>
+        </li>
+        <li class="dropdown" dropdown="">
+          <a href="" style="padding-bottom: 0px;padding-top: 8px;">
+            <form class="form-inline text-center ng-pristine ng-valid">
+              <div class="aside-xl inline">
+                <div class="input-group">
+                  <input type="text" class="form-control input bg-light lt ng-pristine ng-untouched ng-valid ng-empty" placeholder="Your email"
+                    tabindex="0" aria-invalid="false">
+                  <span class="input-group-btn">
+<button class="btn btn-blue mark-bold" type="submit" ng-click="request_invite(email, 'Header', 'Invite Request', '', '', '' ,'')" tabindex="0">Get started</button>
+</span>
+                </div>
+              </div>
+            </form>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>

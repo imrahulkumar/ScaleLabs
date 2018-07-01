@@ -1,0 +1,204 @@
+<!-- uiView:  -->
+<div class="bg-white ng-scope">
+  <div ui-view="" class="bg-white container ng-scope">
+    <div ng-controller="DemoCtrl" class="bg-white ng-scope">
+      <!-- uiView:  -->
+      <div ui-view="" class="ng-scope">
+        <div class="row m-t-xl ng-scope" align="center">
+          <img src="assets/img/theshoecompany.png" width="40%" height="40%">
+        </div>
+
+        <div class="row m-t-xl ng-scope">
+          <div class="col-sm-3 col-xs-12 wrapper" *ngFor="let item of company let i = index">
+            <div class="panel panel-default wrapper shadow elevate-move">
+              <div class="row" align="center">
+                <img src="assets/img/store/{{i+1}}.jpg" width="230" height="230">
+              </div>
+              <div class="row wrapper">
+                <span class="text-blue mark-bold">{{item.com}}{{i}}</span>
+                <br>
+                <h4 class="text-violet">{{item.type}}</h4>
+              </div>
+              <div class="row b-t wrapper">
+                <div class="col-xs-9 wrapper-sm">
+                  <span class="h4 text-blue m-t-lg clickable" role="button" tabindex="0" (click)="buy(i)">BUY </span>
+                  <span class="h4 text-blue m-t-lg clickable m-l-sm" role="button" tabindex="0">
+                    <i class="icon icon-basket"></i>
+                  </span>
+                  <span class="h4 text-red m-l clickable" role="button" tabindex="0">
+                    <i class="fa fa-heart-o"></i>
+                  </span>
+                </div>
+                <div class="col-xs-3 wrapper-sm" align="right">
+                  <span class="h4 text-violet ">
+                    <i class="fa fa-usd">{{item.price}}</i>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="row m-t-xl m-b-xl ng-scope" align="center">
+          <button class="btn btn-rounded  btn-default w-sm elevate-move text-violet"  tabindex="0">
+            <i class="icon icon-refresh"></i> Refresh Prices</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ngInclude: 'tpl/home/blocks/home_footer.html' -->
+  <div data-ng-include=" 'tpl/home/blocks/home_footer.html' " class="ng-scope" style="">
+    <footer id="footer" class="ng-scope">
+      <div class="bg-white wrapper" align="center">
+        <!-- <span class="mark-medium h4 text-blue b-b b-b-blue" style="border-bottom-style: dashed;"> Get a personalized demo</span> -->
+        <p class="h2 text-blue m-t">
+          <strong class="mark-bold">Are you working in
+            <span class="h2 text-blue m-t typewrite" data-period="2000" data-type="[ &quot;Merchandising?&quot;, &quot;Pricing?&quot;, &quot;Buying?&quot; ]">
+              <span class="wrap">Merchandising?</span>
+            </span>
+          </strong>
+        </p>
+      </div>
+      <div class="bg-white">
+        <div class="wrapper">
+          <form class="form-inline text-center ng-pristine ng-valid">
+            <div class="aside-xl inline">
+              <div class="input-group">
+                <input type="text" ng-model="email" class="form-control input-lg bg-light lt ng-pristine ng-untouched ng-valid ng-empty"
+                  placeholder="Drop your email" tabindex="0" aria-invalid="false">
+                <span class="input-group-btn">
+                  <button class="btn btn-lg btn-blue mark-bold" type="submit" ng-click="request_invite(email, 'Footer', 'Invite Request', '', '', '' ,'')"
+                    tabindex="0">Get started</button>
+                </span>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row m-t-xl m-b-xl" style="padding:50px">
+          <div class="col-sm-3">
+            <p class="m-b text-blue mark-bold">GREENDECK</p>
+            <p>Competition Intelligence for Fashion Brands and Retailers</p>
+            <p class="text-blue"> Proudly Backed By </p>
+            <a href="http://www.sap.io" target="_blank">
+              <img class="m-r-xs" src="assets/img/sapio.png" width="60">
+            </a>
+            <a href="" target="_blank">
+              <img class="m-r-xs" src="assets/img/techstars.png" width="45">
+            </a>
+            <a href="" target="_blank">
+              <img class="m-r-xs" src="assets/img/sbc.png" width="32">
+            </a>
+          </div>
+          <div class="col-sm-3">
+            <p class="m-b text-blue mark-bold">PRODUCT</p>
+            <ul class="list-unstyled">
+              <li>
+                <a href="" target="_blank">Tech</a>
+              </li>
+            </ul>
+
+          </div>
+          <div class="col-sm-3">
+            <p class="m-b text-blue mark-bold">COMPANY</p>
+            <ul class="list-unstyled">
+              <!-- <li><a href="#/home/about">About Us</a></li> -->
+              <li>
+                <a href="http://www.greendeck.co/#/home/webinar">
+                  <i>
+                    <img src="assets/img/SAP-Logo.png" width="30"> </i> Webinar
+                </a>
+              </li>
+              <li>
+                <a href="">Contact Us</a>
+              </li>
+              <li>
+                <a href="">Blog</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-sm-3">
+            <p class="m-b text-blue mark-bold">CONTACT US</p>
+            <p class="text-blue">Germany Office</p>
+            <p class="text-sm">Mindspace Krausenstraße,
+              <br> Krausenstraße 9-10,
+              <br> 10117 Berlin, Germany
+              <br>
+            </p>
+            <p class="text-blue">India Office</p>
+            <p class="text-sm">The Garage, 210 SJ Marg
+              <br> Lower Parel, Mumbai — India
+            </p>
+            <p>Sales:
+              <a href="mailto:rahulkumar151995@gmail.com">rahulkumar151995@gmail.com</a>
+            </p>
+            <a href="mailto:sales@greendeck.co" class="btn btn-icon btn-rounded">
+              <i class="fa fa-envelope"></i>
+            </a>
+            <a href="https://www.linkedin.com/company-beta/13267028/" class="btn btn-icon btn-rounded">
+              <i class="fa fa-linkedin"></i>
+            </a>
+            <a href="https://www.twitter.com/greendeckco" class="btn btn-icon btn-rounded">
+              <i class="fa fa-twitter"></i>
+            </a>
+
+          </div>
+        </div>
+      </div>
+      <div class="bg-white">
+        <div class="wrapper">
+          <div class="row padder-v m-t">
+            <div class="col-xs-12" align="center">
+              <span>
+                <i>
+                  <img src="assets/img/logo.png" class="m-r-xs" style="max-height: 30px;">
+                </i>
+              </span>
+              <br>
+              <span class="text-blue mark-bold"> © 2018 </span>
+              <br> Bringing science to the art of pricing
+
+            </div>
+
+            <div class="col-xs-4 text-right">
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+
+
+
+
+  <!--Model for the Phone otp verfication-->
+  <div class="modal fade my-modal" id="cart" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalCenterTitle">Enter OTP</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="container pb-3">
+            <div class="form-group" style="height:65px; margin-bottom: 0">
+              <input type="text" class="form-control" maxlength="6" id="exampleFormControlInput1" placeholder="------">
+            </div>
+            <div class="row">
+              <div class="col">
+                <button class="btn btn-secondary">Resend OTP</button>
+              </div>
+              <div class="col text-right">
+                <button class="btn btn-success"> Submit </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,63 @@
+<div class="bg-white ng-scope">
+  <div ui-view="" class="bg-white container ng-scope">
+    <div ng-controller="DemoCtrl" class="bg-white ng-scope">
+
+      <div class="row m-t-xl ng-scope">
+        <div class="col-sm-3 col-xs-12 wrapper">
+          <div class="panel panel-default wrapper shadow elevate-move">
+            <div class="row" align="center">
+              <img src="assets/img/store/{{message+1}}.jpg" width="230" height="230">
+            </div>
+            <div class="row wrapper">
+              <span class="text-blue mark-bold">{{company[message].com}}</span>
+              <br>
+              <h4 class="text-violet">{{company[message].type}}</h4>
+            </div>
+            <div class="row b-t wrapper">
+              <div class="col-xs-9 wrapper-sm">
+                <span class="h4 text-blue m-t-lg clickable" role="button" tabindex="0">BUY </span>
+                <span class="h4 text-blue m-t-lg clickable m-l-sm" role="button" tabindex="0">
+                  <i class="icon icon-basket"></i>
+                </span>
+                <span class="h4 text-red m-l clickable" role="button" tabindex="0">
+                  <i class="fa fa-heart-o"></i>
+                </span>
+              </div>
+              <div class="col-xs-3 wrapper-sm" align="right">
+                <span class="h4 text-violet ">
+                  <i class="fa fa-usd">{{company[message].price}}</i>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="form-group pad-side col-xl-3 col-lg-4 col-md-6">
+        <label for="gender">No. of quantity</label>
+        <select  class="form-control" (change)="quantity($event)">
+          <option value="1">1 </option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+        </select>
+      </div>
+
+
+      <div class="form-group pad-side col-xl-3 col-lg-4 col-md-6">
+          <label>Address</label>
+      <textarea rows="4"></textarea>
+        </div>
+
+
+      <div class="form-group pad-side col-xl-3 col-lg-4 col-md-6">
+     <label>Total Price</label>
+      <label>{{price * company[message].price}}</label>
+      </div>
+      <div class="form-group pad-side col-xl-3 col-lg-4 col-md-6">
+      <button class="btn btn-success margin-up"(click)="buy()" >Buy</button>
+    </div>
+    </div>
+  </div>
+</div>
