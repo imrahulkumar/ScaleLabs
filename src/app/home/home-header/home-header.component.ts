@@ -22,7 +22,8 @@ export class HomeHeaderComponent {
             url ==="/about-us"  ||
             url ==="/blog"  ||
             url ==="/home" ||
-            url ==="/buy"
+            url ==="/buy" ||
+            url ==="/currency-convert"
             
             )  {
           this.header = true;

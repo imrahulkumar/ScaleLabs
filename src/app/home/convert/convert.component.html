@@ -1,0 +1,46 @@
+<div class="main-wrapper">
+  <div class="transparent-white-container">
+    <div class="container-fluid">
+      <div class="row no-margin">
+        <form [formGroup]="rForm" (ngSubmit)="convert(rForm)">
+            <div class="col-12 col-sm-6 col-lg-4 form-group px-0 px-sm-3 px-md-5">
+                <label>Initial Currency*</label>
+                <select class="form-control" formControlName="initial">
+                    <option *ngFor="let list of lists" value={{list}}>{{list}}</option>
+                  </select>
+                <div class="alert alert-danger alert-own" *ngIf="!rForm.controls['initial'].valid && rForm.controls['initial'].touched">
+                    <div *ngIf="rForm.controls['initial'].errors.required"> First Name is required</div>                    
+                  </div>
+              </div>
+              <div class="col-12 col-sm-6 col-lg-4 form-group px-0 px-sm-3 px-md-5">
+                  <label>Final Currency*</label>
+                  <select class="form-control" formControlName="final">
+                      <option *ngFor="let list of lists" value={{list}}>{{list}}</option>
+                    </select>
+                  <div class="alert alert-danger alert-own" *ngIf="!rForm.controls['final'].valid && rForm.controls['final'].touched">
+                      <div *ngIf="rForm.controls['final'].errors.required"> First Name is required</div>
+                     
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4 form-group px-0 px-sm-3 px-md-5">
+                    <label>Amount*</label>
+                    <input type="text" name="" class="form-control" formControlName="amount">
+                    <div class="alert alert-danger alert-own" *ngIf="!rForm.controls['amount'].valid &&rForm.controls['amount'].touched">
+                        <div *ngIf="rForm.controls['amount'].errors.required"> amount is required</div>                       
+                      </div>
+                  </div>
+                  <button class="btn btn-own btn-green ">
+                      Convert
+                      </button>
+
+                   
+        </form>
+     
+      </div>
+      <div class="col-12 col-sm-6 col-lg-4 form-group px-0 px-sm-3 px-md-5">
+          <label>Converted Value</label>
+          {{value}}
+        </div>
+    </div>
+  </div>
+</div>

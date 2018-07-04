@@ -14,6 +14,9 @@ import { AlertService } from "./home/_service/alert.service";
 import { SharedModule } from "./home/sharedModule/sharedmodule";
 import { CartComponent } from './home/cart/cart.component';
 import { DataService } from "./home/_service/data.service";
+import { ConvertComponent } from './home/convert/convert.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpModule } from "@angular/http";
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,12 +26,16 @@ import { DataService } from "./home/_service/data.service";
     AboutusComponent,
     BlogComponent,
     IntroHomeComponent,
-    CartComponent
+    CartComponent,
+    ConvertComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    SharedModule
+    SharedModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpModule,
   ],
   providers: [AlertService,DataService],
   bootstrap: [AppComponent]
